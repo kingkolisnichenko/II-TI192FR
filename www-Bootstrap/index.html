@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+      <title>IT News</title>
+   </head>
+   <body>
+      <!-- Класс навбара -->
+      <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
+         <div class="container">
+            <a href="index.html" class="navbar-brand">IT News</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+               <ul class="navbar-nav mr-auto mb-2">
+                  <li class="nav-item">
+                     <a class="nav-link active" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="windows.html">Windows</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="intel.html">Intel</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="amd.html">AMD</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                 </li>
+               </ul>
+               <form class="d-flex">
+                  <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+               </form>
+            </div>
+         </div>
+      </nav>
+      <div class="container">
+         <div class="container">
+            <div class="row my-5">
+               <div class="col-md-8">
+                <div class="container-fluid">
+                  <p id="currentDataTime" class="btn btn-outline-dark w-100 font-weight-bold" style="cursor: default"></p>
+                 </div>
+                  <div class="container">
+                     <img src="img/windows_11.jpg" alt="" class="w-100">
+                     <a href="windows.html" class="link-dark text-decoration-none"><h2>Windows 11 начала «резать» скорость работы SSD</h2></a>
+                     <p>В сети начало расти количество жалоб пользователей на работу Windows 11 с твердотельными накопителями. По словам их владельцев, операционная система без видимых причин начала заметно снижать скорость работы SSD. Проблема затронула разные модели комплектующих, и пока не имеет решения, за исключением отката на предыдущую версию операционки.</p>
+        
+                  </div>
+                  <div class="container">
+                     <img src="img/amd.jpg" alt="" class="w-100">
+                     <a href="#" class="link-dark text-decoration-none"><h2>AMD Ryzen 7 5800X3D: игровой процессор с технологией 3D V-Cache</h2></a>
+                     <p>AMD представила новый флагманский процессор для десктопов — модель Ryzen 7 5800X3D с поддержкой технологии 3D V-Cache. Он рассчитан на геймерские ПК, и, по заверению производителя, способен обойти в игровых дисциплинах даже топовый Ryzen 9 5900X, пусть и с некоторыми оговорками.
+                        Согласно представленным компанией результатам тестирования, Ryzen 7 5800X3D оказался в среднем на 15% быстрее модели Ryzen 9 5900X при гейминге в Full HD на высоких настройках графики.
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md">
+                 
+                  <div class="container">
+                     <img src="img/xiaomi-intel.jpg" alt="" class="w-100">
+                     <a href="#" class="link-dark text-decoration-none"><h3>Ноутбуки Xiaomi получат новейшие чипы Intel</h3></a>
+                     <p>Сразу две модификации новых ноутбуков Xiaomi были обнаружены в базе данных Geekbench 5. Бенчмарк раскрыл ключевые характеристики не только лэптопов, но и процессоров Intel i5 и i7 12-го поколения.</p>
+                  </div>
+                  <div class="container">
+                     <img src="img/console.jpg" alt="" class="w-100">
+                     <a href="#" class="link-dark text-decoration-none"><h3>Самая мощная игровая консоль One Netbook на Core i7 поступила в продажу</h3></a>
+                     <p>Анонсированная в начале года портативная консоль ONEXPLAYER mini по своим характеристикам сравнима с ультрабуком. Собрав гораздо больше средств, чем планировалось, компания One Netbook объявила об открытии предзаказов на свой миниатюрный игровой компьютер.</p>
+                  </div>
+                  <div class="container">
+                    <a href="#" class="link-dark text-decoration-none"><h3>Новинки AMD Radeon: десктопная 6500 XT и серия RX 6000S для ультрабуков</h3></a>
+                     <p>Вслед за NVIDIA новые видеокарты на CES 2022 показала и AMD. Cемейство Radeon пополнилось сразу восемью графическими ускорителями для ноутбуков.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+
+      <script>
+        getData();
+
+        function getData(){
+          var data = new Date();
+          document.getElementById('currentDataTime').innerText = "Текущее время: " + data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds();
+          setTimeout(getData,1000);
+          }
+          
+      </script>
+      
+   </body>
+</html>
